@@ -1,0 +1,49 @@
+setup virtual environment for python
+--------------------------------------
+
+# go to project directory
+python -m venv <project_envorinment_name>
+
+# check which python instance is active
+# powershell
+gcm python
+# bash
+which python
+
+# activate virtual environment
+# powershell
+<venv_name>/Scripts/Activate.ps1
+# bash
+source <venv_name>/bin/activate
+
+# if the powershell does not allow running the script
+# open powershell as administrator
+Set-ExecutionPolicy RemoteSigned
+
+# check if virtual python instance is now active
+# powershell
+gcm python
+# bash
+which python
+
+# if you want to leave the virtual environment
+deactivate
+
+
+install flask in virtual environment
+--------------------------------------
+pip3 install flask
+
+# open python interactive shell and check if flask is correctly installed
+python
+import flask
+
+
+setup flask environment variable
+--------------------------------------
+$env:FLASK_APP="yourflaskapplication.py"
+
+run flask webserver
+--------------------------------------
+flask run
+# the app is now hosted on 127.0.0.1:5000 (localhost:5000)
